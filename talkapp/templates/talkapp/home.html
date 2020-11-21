@@ -1,9 +1,16 @@
+{% load crispy_forms_filters %}
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title></title>
+    <title></title>
 </head>
+
 <body>
-	<h1>Home Page!</h1>
+    <h1>Home Page!</h1>
+    <form style="display: flex; flex-direction:column; widht:200px">
+        {% csrf_token %} {{form | crispy}}
+    </form>
 </body>
+
 </html>
