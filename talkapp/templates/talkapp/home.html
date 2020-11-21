@@ -8,9 +8,17 @@
 
 <body>
     <h1>Home Page!</h1>
-    <form style="display: flex; flex-direction:column; widht:200px">
+
+    {% for message in messages %}
+    <p>{{message}}</p> {% endfor %}
+
+    <form style="display: flex; flex-direction:column; width:200px" method="POST">
         {% csrf_token %} {{form | crispy}}
+        <input type="submit" style="width: 200px;;" value="Submit">
     </form>
+    <strong>Homonyms :</strong>{% for homophone in homophones %}
+    <span>{{homophone}}</span> {% endfor %}
+
 </body>
 
 </html>
