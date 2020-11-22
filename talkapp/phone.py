@@ -9,9 +9,7 @@ def to_phoneme(string):
 		try:
 			for j in phn[word][0]:
 				f.write(str(j)+' ')
-			
 		except Exception as e:
 			f.write(str(e))
-
 		f.write('\n')
 

@@ -12,7 +12,7 @@
     {% for message in messages %}
     <p>{{message}}</p> {% endfor %}
 
-    <form style="display: flex; flex-direction:column; width:200px" method="POST">
+    <form style="display: flex; flex-direction:column; width:200px" action="{% url 'file' %}" method="POST">
         {% csrf_token %} {{form | crispy}}
         <input type="submit" style="width: 200px;;" value="Submit">
     </form>

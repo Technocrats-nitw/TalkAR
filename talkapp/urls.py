@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('phoneme.txt/',views.file_download, name="file")
 ]
