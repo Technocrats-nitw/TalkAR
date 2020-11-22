@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render , HttpResponse
 from random import choice
 from .models import DataIn
 from .phone import to_phoneme
-import mimetypes 
+#import mimetypes 
 
 
 def home(request):
